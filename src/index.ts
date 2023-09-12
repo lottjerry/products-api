@@ -8,6 +8,11 @@ const prisma = new PrismaClient()
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }))
 
+//Starting Page
+app.get('/', (req, res) => {
+  res.send('Products API')
+})
+
 //GET: Get all products
 app.get("/products", async(req, res, next) => {
   try {
