@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }))
 
 //Starting Page
 app.get('/', (req, res) => {
-  res.send('Products API')
+  res.send("Products API")
 })
 
 //GET: Get all products

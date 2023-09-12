@@ -46,6 +46,10 @@ var app = (0, express_1.default)();
 var prisma = new client_1.PrismaClient();
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
+//Starting Page
+app.get('/', function (req, res) {
+    res.send("Products API");
+});
 //GET: Get all products
 app.get("/products", function (req, res, next) { return __awaiter(void 0, void 0, void 0, function () {
     var products, error_1;
