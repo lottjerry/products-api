@@ -41,9 +41,16 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 require("dotenv/config");
 var express_1 = __importDefault(require("express"));
+var cors_1 = __importDefault(require("cors"));
 var client_1 = require("@prisma/client");
 var app = (0, express_1.default)();
 var prisma = new client_1.PrismaClient();
+var corsOptions = {
+    origin: 'http://localhost:3000',
+    credentials: true,
+    optionSuccessStatus: 200
+};
+app.use((0, cors_1.default)(corsOptions));
 app.use(express_1.default.json());
 app.use(express_1.default.urlencoded({ extended: true }));
 //Starting Page
