@@ -6,10 +6,11 @@ import { PrismaClient } from "@prisma/client";
 const app = express()
 const prisma = new PrismaClient()
 
+// Set the corsOptions to allow cross-origin-access 
 const corsOptions ={
-    origin:'http://localhost:3000', 
-    credentials:true,            //access-control-allow-credentials:true
-    optionSuccessStatus:200
+    origin:'http://localhost:3000', // url of your frontend
+    credentials:true,              //  access-control-allow-credentials:true
+    optionSuccessStatus:200       
 }
 app.use(cors(corsOptions));
 
