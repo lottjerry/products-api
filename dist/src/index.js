@@ -47,7 +47,7 @@ var app = (0, express_1.default)();
 var prisma = new client_1.PrismaClient();
 // Set the corsOptions to allow cross-origin-access 
 var corsOptions = {
-    origin: "https://products-map.netlify.app/",
+    origin: "https://products-map.netlify.app",
     credentials: true,
     optionSuccessStatus: 200
 };
