@@ -8,7 +8,7 @@ const prisma = new PrismaClient()
 
 // Set the corsOptions to allow cross-origin-access 
 const corsOptions ={
-    origin: "https://products-map.netlify.app", // url of your frontend
+    origin: "https://products-map.netlify.app/", // url of your frontend
     credentials:true,              //  access-control-allow-credentials:true
     optionSuccessStatus:200       
 }
