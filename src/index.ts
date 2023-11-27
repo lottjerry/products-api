@@ -2,16 +2,13 @@ import "dotenv/config";
 import express from 'express'
 import cors from "cors";
 import { PrismaClient } from "@prisma/client";
-import dotenv from 'dotenv'
-
-dotenv.config()
 
 const app = express()
 const prisma = new PrismaClient()
 
 // Set the corsOptions to allow cross-origin-access 
 const corsOptions ={
-    origin: process.env.ORIGIN, // url of your frontend
+    origin: "https://products-map.netlify.app", // url of your frontend
     credentials:true,              //  access-control-allow-credentials:true
     optionSuccessStatus:200       
 }
